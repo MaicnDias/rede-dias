@@ -1,13 +1,20 @@
 <head>
   <title>Dias</title>
 </head>
+
 <template name="Inicio">
-<div class="jumbotron">
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+       <div class="jumbotron">
   <h1>Conecte-se ao Dias!</h1>
   <p>Que tal ficar mais perto do seus amigos?</p>
   <p>Compartilhe com o mundo agora mesmo</p>
   <p>Conecte-se já!</p>
   <p><a class="btn btn-primary btn-lg" href="#" role="button">Cadastre-se</a></p>
+</div>  
+</div>
+</div>
 </div>
 </template>
 
@@ -24,13 +31,4 @@
 <template name="Contato">
   <h1>Contato</h1>
   <p>Whatsapp: +55 9 3305-0401</p>
-</template>
-
-<template name="Cabecalho">
-  <a href="/">Inicio</a> <a href="/sobre">Sobre</a> <a href="/contato">Contato</a>
-</template>
-
-<template name="LayoutPrincipal">
-  {{> Cabecalho}}
-  {{> Template.dynamic template=main}}
 </template>
