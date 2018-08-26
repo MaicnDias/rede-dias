@@ -2,24 +2,29 @@
   <title>Dias</title>
 </head>
 
-<body>
-  <h1>Bem-vind@s à Dias!</h1>
-
-  {{> hello}}
-  {{> info}}
-</body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button <b>{{counter}}</b> times.</p>
+<template name="Inicio">
+  <h1>Conecte-se ao Dias!</h1>
+  <p>Que tal ficar mais perto do seus amigos?</p>
+  <p>Compartilhe com o mundo agora mesmo</p>
+  <p>Conecte-se já!</p>
+<p><a href="#">Link</a></p>
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+<template name="Sobre">
+  <h1>Sobre</h1>
+  
+  <h2>Nossa visão</h2>
+  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+  
+  <h2>Nossos valores</h2>
+  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+</template>
+
+<template name="Cabecalho">
+  <a href="/">Inicio</a> <a href="/sobre">Sobre</a>
+</template>
+
+<template name="LayoutPrincipal">
+  {{> Cabecalho}}
+  {{> Template.dynamic template=main}}
 </template>
