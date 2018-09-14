@@ -1,18 +1,31 @@
 <template name="Perfil">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                {{#with perfil}}
-                    <h1>{{username}}</h1>
-                    <h4>{{profile.name}}</h4>
-                {{/with}}
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        {{#with perfil}}
+          <h1>{{username}}</h1>
+          <h4>{{profile.name}}</h4>
 
-            <div class="col-md-6">
-                {{#each posts}}
-                    {{> Post}}
-                {{/each}}
-            </div>
-        </div>
+          <p>{{profile.seguidores.length}} seguidores</p>
+          <p>{{profile.seguindo.length}} seguindo</p>
+        {{/with}}
+
+        {{#if euMesmo}}
+          <p>Olá :)</p>
+        {{else}}
+          {{#if segue}}
+            <button class="btn btn-danger deixar-de-seguir">Deixar de Seguir</button>
+          {{else}}
+            <button class="btn btn-primary seguir">Seguir</button>
+          {{/if}}
+        {{/if}}
+      </div>
+
+      <div class="col-md-6">
+        {{#each posts}}
+          {{> Post}}
+        {{/each}}
+      </div>
     </div>
+  </div>
 </template>

@@ -56,3 +56,7 @@
 .tt-suggestion p {
   margin: 0;
 }/* CSS declarations go here */
+
+body {
+  background-color: #e5e5e5;
+}
