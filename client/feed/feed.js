@@ -1,6 +1,6 @@
 Template.Feed.helpers({
     posts: function() {
-    var postsDaCollection = Posts.find().fetch();
-    return postsDaCollection;
+        var postsDaCollection = Posts.find().fetch().reverse();
+        return postsDaCollection;
     }
 });

@@ -6,12 +6,13 @@
           <h1>{{username}}</h1>
           <h4>{{profile.name}}</h4>
 
-          <p>{{profile.seguidores.length}} seguidores</p>
-          <p>{{profile.seguindo.length}} seguindo</p>
+          <p><h4><span class="label label-info"><span class="badge">{{profile.seguidores.length}}</span> seguidores</span></h4></p>
+          <p><h4><span class="label label-default"><span class="badge">{{profile.seguindo.length}}</span> seguindo</span></h4></p>
+          
         {{/with}}
-
+        
         {{#if euMesmo}}
-          <p>Olá :)</p>
+          <p>Olá {{profile.name}}, bem-vindo ao seu Perfil!</p>
         {{else}}
           {{#if segue}}
             <button class="btn btn-danger deixar-de-seguir">Deixar de Seguir</button>

@@ -7,10 +7,10 @@ Template.Perfil.helpers({
     },
     posts: function() {
         var idDoUsuario = FlowRouter.getParam("id");
-        var postsDoPerfil = Posts.find({idDoAutor: idDoUsuario}).fetch();
+        var postsDoPerfil = Posts.find({idDoAutor: idDoUsuario}).fetch().reverse();
         return postsDoPerfil;
     },
-       segue: function() {
+    segue: function() {
         var idDoUsuario = FlowRouter.getParam("id");
         var usuario = Meteor.users.findOne({_id: idDoUsuario});
         var seguidores = usuario.profile.seguidores;
