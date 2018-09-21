@@ -68,3 +68,11 @@ body {
 .fa {
   font-size: 25px;
 }
+
+.link-para-perfil {
+  color: black;
+}
+
+.link-para-perfil:hover {
+  color: black;
+}

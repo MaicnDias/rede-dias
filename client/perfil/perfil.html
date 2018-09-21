@@ -6,9 +6,8 @@
           <h1>{{username}}</h1>
           <h4>{{profile.name}}</h4>
 
-          <p><h4><span class="label label-info"><span class="badge">{{profile.seguidores.length}}</span> seguidores</span></h4></p>
-          <p><h4><span class="label label-default"><span class="badge">{{profile.seguindo.length}}</span> seguindo</span></h4></p>
-          
+          <div>{{profile.seguidores.length}} seguidores</div>
+          <div>{{profile.seguindo.length}} seguindo</div>
         {{/with}}
         
         {{#if euMesmo}}
