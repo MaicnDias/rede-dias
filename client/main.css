@@ -60,3 +60,11 @@
 body {
   background-color: #e5e5e5;
 }
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+.fa {
+  font-size: 25px;
+}
