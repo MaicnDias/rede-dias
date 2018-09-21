@@ -6,17 +6,21 @@
           <h1>{{username}}</h1>
           <h4>{{profile.name}}</h4>
 
-          <div>{{profile.seguidores.length}} seguidores</div>
-          <div>{{profile.seguindo.length}} seguindo</div>
+          
+         
+          <div><h4><span class="label label-primary">{{profile.seguidores.length}} seguidores <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></span></h4></div>
+          <div><h4><span class="label label-default">{{profile.seguindo.length}} seguindo <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></span></h4></div>
+
+          
         {{/with}}
         
         {{#if euMesmo}}
-          <p>Olá {{profile.name}}, bem-vindo ao seu Perfil!</p>
+          <p>Olá, bem-vindo ao seu perfil!</p>
         {{else}}
           {{#if segue}}
-            <button class="btn btn-danger deixar-de-seguir">Deixar de Seguir</button>
+            <button class="btn btn-danger deixar-de-seguir">Deixar de Seguir <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
           {{else}}
-            <button class="btn btn-primary seguir">Seguir</button>
+            <button class="btn btn-success seguir">Seguir <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></button>
           {{/if}}
         {{/if}}
       </div>
